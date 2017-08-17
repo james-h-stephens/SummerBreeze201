@@ -31,6 +31,13 @@ body {
     }
 
 
+@media (max-height: 500px) {
+    .text-vertical-center h1 {
+        font-size: 2.5em;
+    }
+}
+
+
 /* Custom Button Styles */
 
 .btn-dark {

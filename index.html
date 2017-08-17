@@ -276,6 +276,14 @@
                     $(this).css({ 'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px' });
 
                     $(this).width(videoWidth).height(videoHeight);
+
+                    if (videoWidth < windowWidth) {
+                        videoWidth = windowWidth;
+                        videoHeight = videoWidth * videoAspectRatio;
+
+                        $(this).css({ 'margin-top': '', 'margin-left': '', 'height': '' })
+                        $(this).width(videoWidth).height(videoHeight);
+                    }
                 }
                 else {
                     $(this).css({ 'margin-top': '', 'margin-left': '', 'height': '' })
