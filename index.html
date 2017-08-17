@@ -20,7 +20,7 @@
 <body>
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
+    <nav id="sidebar-wrapper" style="z-index:1001;">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-dark btn-med pull-right toggle" style="background-color: rgb(34, 34, 34);"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
@@ -281,6 +281,9 @@
                     $(this).css({ 'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px' });
 
                     $(this).width(videoWidth).height(videoHeight);
+                }
+                else {
+                    $(this).css({ 'margin-top': '', 'margin-left': '', 'height': '' })
                 }
 
                 $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
