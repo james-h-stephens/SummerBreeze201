@@ -14,6 +14,8 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
     <link href="css/accordion.css" rel="stylesheet">
+    <link href="http://cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link href="http://cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
     <!-- Navigation -->
@@ -170,28 +172,28 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
+                                <a class="thumbnail gallery" href="img/portfolio-1.jpg">
                                     <img class="img-portfolio img-fluid" src="img/portfolio-1.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
+                                <a class="thumbnail gallery" href="img/portfolio-2.jpg">
                                     <img class="img-portfolio img-fluid" src="img/portfolio-2.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
+                                <a class="thumbnail gallery" href="#" data-featherlight="img/portfolio-3.jpg">
                                     <img class="img-portfolio img-fluid" src="img/portfolio-3.jpg">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
+                                <a class="thumbnail gallery" href="#" data-featherlight="img/portfolio-4.jpg">
                                     <img class="img-portfolio img-fluid" src="img/portfolio-4.jpg">
                                 </a>
                             </div>
@@ -260,7 +262,7 @@
         <a id="to-top" href="#top" class="btn btn-dark btn-lg page-scroll"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
     </footer>
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
@@ -268,5 +270,21 @@
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js"></script>
+    <script src="http://cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function () {
+            $('.gallery').featherlightGallery({
+                gallery: {
+                    fadeIn: 300,
+                    fadeOut: 300
+                },
+                variant: 'featherlight-gallery2',
+                openSpeed: 300,
+                closeSpeed: 300
+            });
+        });
+    </script>
 </body>
 </html>
