@@ -363,3 +363,8 @@ footer {
 ::-webkit-scrollbar-thumb {
     background: #FF0000;
 }
+
+.padded-row div {
+    border: red;
+    padding: 10px 20px 10px 20px;
+}
